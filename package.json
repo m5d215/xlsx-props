@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "ncc build src/index.ts --out build --minify && nexe build/index.js --output build/xlsx-props.exe",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "xlsx-populate": "^1.19.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "@zeit/ncc": "^0.20.4",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nexe": "^3.3.2",
+    "prettier": "^1.17.1",
+    "typescript": "^3.4.5"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
